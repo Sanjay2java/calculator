@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+
+<div>
+    Input1: <input id="ipt1" type="number" placeholder="enter a number">
+</div>
+<br/>
+<div>
+    Input2: <input id="ipt2" type="number" placeholder="enter a number">
+</div>
+<br/>
+<div>
+    <button onclick="calc('+')">+</button>
+    <button onclick="calc('-')">-</button>
+    <button onclick="calc('*')">*</button>
+    <button onclick="calc('/')">/</button>
+</div>
+<div style="margin-top: 10px;">
+    Output: <input id="op">
+</div>
+
+<script>
+    function calc(opt) {
+        var y= parseInt(document.getElementById("ipt1").value)
+        var x = parseInt(document.getElementById("ipt2").value)
+        if(opt =='+'){
+        if(x<=y || x>y){
+         document.getElementById('op').value = parseInt(y) + parseInt(x)
+        } 
+        else if(x==x || y==""){
+            window.alert("Invalid number")       
+        }
+        else if(x=="" || y==y){
+            window.alert("Invalid number")       
+        }
+        else{
+            window.alert("Enter num 1 and num 2")       
+        }
+
+        }
+        if(opt =='-'){
+            if(x<=y){
+           document.getElementById('op').value = parseInt(y) - parseInt(x)
+        }
+        else if(x>y){
+            document.getElementById('op').value = parseInt(x) - parseInt(y)
+        }
+        else if(x==x || y==""){
+            window.alert("Invalid number")       
+        }
+        else if(x=="" || y==y){
+            window.alert("Invalid number")       
+        }
+        else{
+          window.alert("Enter num1 and num2")       
+          }
+        }
+        if(opt =='*'){
+            if(x<=y || x>y){
+         document.getElementById('op').value = parseInt(y) * parseInt(x)
+        } 
+        else if(x==x || y==""){
+            window.alert("Invalid number")       
+        }
+        else if(x=="" || y==y){
+            window.alert("Invalid number")       
+        }
+        else{
+            window.alert("Enter num1 and num2")       
+        }
+        }
+        if(opt =='/'){
+            if(x<=y){
+           document.getElementById('op').value = parseInt(y) / parseInt(x)
+        }
+         else if(x>y){
+            document.getElementById('op').value = parseInt(x) / parseInt(y)
+        }
+        else if(x==x || y==""){
+            window.alert("Invalid number")       
+        }
+        else if(x=="" || y==y){
+            window.alert("Invalid number")       
+        }
+        else{
+          window.alert("Enter num1 and num2")       
+          }
+      }
+        }
+</script>
+
+</body>
+</html>
